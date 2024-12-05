@@ -2,7 +2,7 @@
 
 This repo is for work on developing a python translation of the UNSW algorithm.
 
-The starting point is the code [here](https://github.com/floriankri/ecg_detector_assessment/blob/sharon_ho/Algorithm_tester/detectors/unsw/UNSW_QRSDetector.m).
+The starting point was the Matlab code [here](https://github.com/floriankri/ecg_detector_assessment/blob/sharon_ho/Algorithm_tester/detectors/unsw/UNSW_QRSDetector.m).
 
 For reference, the original code is available [here](https://doi.org/10.7910/DVN/QTG0EP) under the [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0) licence.
 
