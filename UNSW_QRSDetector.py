@@ -116,7 +116,6 @@ def UNSW_QRSDetector(rawecg,fs,mask=None,isplot=False):
     # Fill in sections less than 1.5*mRR seconds;
 
     for i in range(1, len(temp)):
-        print(i, temp[i], temp[i-1])
         if temp[i] - temp[i - 1] == -1:
             start = i
         if temp[i] - temp[i - 1] == 1 and (i - 1) - start < 1.5 * m_rr:
@@ -157,7 +156,7 @@ def UNSW_QRSDetector(rawecg,fs,mask=None,isplot=False):
         'nRR': n_rr,
         'mRR': m_rr,
         'nSections': n_sections,
-        'runtime': datetime.now() - starttime
+        'runtime': datetime.datetime.now() - starttime
     }
     
     return unswdata
