@@ -7,9 +7,8 @@ Created on Thu Dec  5 15:37:21 2024
 
 import datetime  # for runtime assessment
 import numpy as np
-from scipy.signal import detrend, butter, filtfilt, lfilter
+from scipy.signal import filtfilt, lfilter
 from scipy.signal.windows import hamming
-from scipy.ndimage import rank_filter
 from helper import cleansignal, sortfilt1, smashECG, smashedFFT, turning_points, calculate_rr_interval
 
 def UNSW_QRSDetector(rawecg,fs,mask=None,isplot=False):

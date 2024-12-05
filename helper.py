@@ -6,7 +6,7 @@ Created on Thu Dec  5 15:39:17 2024
 """
 
 import numpy as np
-from scipy.signal import detrend, butter, filtfilt, lfilter
+from scipy.signal import detrend, butter, filtfilt
 import matplotlib.pyplot as plt
 
 def turning_points(x, threshold):
