@@ -1257,7 +1257,7 @@ def cleansignal(x,fs):
              -3.9221262303922142e-004])
 
         # hpf - eliminate dc component or low frequency drift
-        hpdata = myfiltfilt(numhpz, 1, meddata)
+        hpdata = myfiltfilt(numhpz, [1], meddata)
 
         # low pass linear phase filter
         num, den = butter(8, 20 / (fs / 2), btype='low')
