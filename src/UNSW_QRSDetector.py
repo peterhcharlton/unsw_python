@@ -9,7 +9,7 @@ import datetime  # for runtime assessment
 import numpy as np
 from scipy.signal import filtfilt, lfilter
 from scipy.signal.windows import hamming
-from helper import cleansignal, sortfilt1, smashECG, smashedFFT, turning_points, calculate_rr_interval
+from src.helper import cleansignal, sortfilt1, smashECG, smashedFFT, turning_points, calculate_rr_interval
 
 def UNSW_QRSDetector(rawecg,fs,mask=None,isplot=False):
     
@@ -145,6 +145,8 @@ def UNSW_QRSDetector(rawecg,fs,mask=None,isplot=False):
     qrs = np.setdiff1d(qrs, short_rr_idx)
     qrs = np.union1d(qrs, qrs3)
     m_rr, rr_list, n_rr, n_sections = calculate_rr_interval(qrs, finalmask, fs)
+    
+    qrs = qrs.astype(int)
 
     if isplot == 1:
         raise Exception('Haven''t coded up this functionality from matlab')
