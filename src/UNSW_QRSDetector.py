@@ -145,6 +145,8 @@ def UNSW_QRSDetector(rawecg,fs,mask=None,isplot=False):
     qrs = np.setdiff1d(qrs, short_rr_idx)
     qrs = np.union1d(qrs, qrs3)
     m_rr, rr_list, n_rr, n_sections = calculate_rr_interval(qrs, finalmask, fs)
+    
+    qrs = qrs.astype(int)
 
     if isplot == 1:
         raise Exception('Haven''t coded up this functionality from matlab')

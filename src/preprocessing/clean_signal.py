@@ -13,7 +13,7 @@ def cleansignal(x,fs):
     x = x.ravel() #reshape so that it is the same dimension as baseline
     
     # Remove baseline
-    baseline = sortfilt1(x,round(0.5*fs),50)
+    baseline = sortfilt1(x,int(round(0.5*fs)),50)
     meddata = x - baseline
     
     if fs>600 or fs<400:
