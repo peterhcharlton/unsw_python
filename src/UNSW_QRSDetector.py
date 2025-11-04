@@ -5,15 +5,12 @@ Created on Thu Dec  5 15:37:21 2024
 @author: hssdwo
 """
 
-import datetime  # for runtime assessment
 import numpy as np
 from scipy.signal import filtfilt, lfilter
 from scipy.signal.windows import hamming
 from src.helper import cleansignal, sortfilt1, smashECG, smashedFFT, turning_points, calculate_rr_interval
 
 def UNSW_QRSDetector(rawecg,fs,mask=None,isplot=False):
-    
-    starttime = datetime.datetime.now()
     
     if fs<50:
         raise Exception('This function requires a sampling rate of at least 50 Hz')
@@ -157,7 +154,6 @@ def UNSW_QRSDetector(rawecg,fs,mask=None,isplot=False):
         'nRR': n_rr,
         'mRR': m_rr,
         'nSections': n_sections,
-        'runtime': datetime.datetime.now() - starttime
     }
     
     return unswdata
