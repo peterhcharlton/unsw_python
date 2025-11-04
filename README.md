@@ -82,9 +82,7 @@ The aim was to create a python translation of the original Matlab implementation
 * Removing code which is required in Matlab but is redundant in Python
 * Not implementing plotting code which was not required to detect QRS complexes
 
-We used the following notebooks to briefly check the implementation:
-* unsw_ecg_detector_example.ipynb: used to check the implementation
-* compare_functions.ipynb: used to compare this implementation to the matlab implementation
+We used the _compare_functions.ipynb_ notebook to compare this implementation to the matlab implementation.
 
 
 ## References
