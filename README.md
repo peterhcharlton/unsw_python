@@ -84,6 +84,11 @@ The aim was to create a python translation of the original Matlab implementation
 
 We used the _compare_functions.ipynb_ notebook to compare this implementation to the matlab implementation.
 
+## Archiving
+
+This repo is archived at:
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17524288.svg)](https://doi.org/10.5281/zenodo.17524288)
 
 ## References
 
